@@ -1,15 +1,12 @@
 import { hasShell, site } from '@/lib/site';
 
-// The footer every route shares (rendered by layout.tsx): add the business's contact and links here.
 export function SiteFooter() {
   if (!hasShell()) return null;
   return (
-    <footer className="border-t border-zinc-200 py-10 text-sm text-zinc-600">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 sm:px-6">
-        <p className="flex items-center gap-3">
-          {site.logo ? <img alt="" className="h-7 w-auto" src={site.logo} /> : null}©{' '}
-          {new Date().getFullYear()} {site.name}
-        </p>
+    <footer className="border-t-2 border-ink py-8 text-sm text-ink/80">
+      <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 sm:px-6 md:flex-row md:justify-between">
+        <p className="font-semibold text-ink">{site.name}</p>
+        <p>Uso interno del equipo. Los datos se guardan solo en este navegador.</p>
       </div>
     </footer>
   );

@@ -1,9 +1,15 @@
 @import 'tailwindcss';
 
-/* The project's design tokens (colours, radius): see _system-docs/design.md. */
+/* Tokens de la carnicería: bordó (identidad), blanco azulejo (fondo), verde perejil (positivo), mostaza (aviso). */
 @theme {
-  --color-brand: oklch(0.55 0.2 260);
-  --color-accent: oklch(0.75 0.15 70);
+  --color-brand: #7a1f2b;
+  --color-brand-dark: #5e1620;
+  --color-accent: #e3b23c;
+  --color-paper: #f7f4ef;
+  --color-ink: #2b2422;
+  --color-ok: #3e7d4f;
+  --color-line: #ded6ca;
+  --radius-card: 0.75rem;
 }
 
 /*
@@ -14,4 +20,8 @@
 @theme inline {
   --font-sans: var(--font-body, ui-sans-serif), system-ui, sans-serif;
   --font-display: var(--font-heading, var(--font-body, ui-sans-serif)), system-ui, sans-serif;
+}
+
+html {
+  background: var(--color-paper);
 }
